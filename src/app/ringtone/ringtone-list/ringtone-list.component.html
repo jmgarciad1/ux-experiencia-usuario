@@ -1,0 +1,147 @@
+<div class="settings-container">
+
+    <div class="main-header create-alarma-button-container">
+  
+      <button
+        (click)="linkMenuTop('/ringtones')"
+        class="menu-alarma-button-active"
+      >
+        Ringtones
+        <em style="margin-left: 5px" class="bi bi-check"></em>
+      </button>
+  
+      <button
+        (click)="linkMenuTop('/fondos')"
+        class="menu-alarma-button"
+      >
+        Fondos
+      </button>    
+  
+      <button
+        class="menu-alarma-button"
+      >
+        Filtros
+      </button>
+  
+      <button
+        class="menu-alarma-button"
+      >
+        Festivos
+      </button>
+  
+      <button
+        class="menu-alarma-button"
+      >
+        Predeterminadas
+      </button>
+  
+      <button
+        (click)="linkMenuTop('/settings/sesiones/create')"
+        class="menu-alarma-button"
+      >
+        Salir
+        <em style="margin-left: 5px; color: red;" class="bi bi-box-arrow-right"></em>
+      </button>
+      
+    </div>
+  
+    <form
+      (ngSubmit)="linkMenuTop('/ringtones')"
+      class="alarma-settings-create-form main-shadow"
+    >
+      <div class="alarma-settings-header"><h2>Listado Ringtones</h2></div>
+
+      <em 
+        (click)="linkMenuTop('/settings/ringtones/create')"
+        class="bi bi-plus-lg style-alarma-new">
+        </em>
+  
+      <div class="item-card-container p-2">  
+        <h5>
+            Futurama
+            <em 
+                style="margin-left: 150px; color: brown; cursor: pointer"
+                class="bi bi-pencil">
+            </em>
+            <em 
+                style="margin-left: 10px; color: brown; cursor: pointer"
+                class="bi bi-trash3">
+            </em>
+            <em 
+                style="margin-left: 10px; color: brown; cursor: pointer"
+                class="bi bi-play-fill">
+            </em>
+        </h5>
+        <span>futurama_v1.mp3</span>
+        <div class="form-check form-switch">
+            <input
+                type="checkbox"                    
+                class="form-check-input style-alarma-switch"
+                id="status"
+                formControlName="status"
+                style="transform: scale(1.5);"
+            />
+        </div>
+      </div>
+
+      <div class="item-card-container p-2">  
+        <h5>
+            Mario Bros
+            <em 
+                style="margin-left: 135px; color: brown; cursor: pointer"
+                class="bi bi-pencil">
+            </em>
+            <em 
+                style="margin-left: 10px; color: brown; cursor: pointer"
+                class="bi bi-trash3">
+            </em>
+            <em 
+                style="margin-left: 10px; color: brown; cursor: pointer"
+                class="bi bi-play-fill">
+            </em>
+        </h5>
+        <span>mariobros_v1.mp3</span>
+        <div class="form-check form-switch">
+            <input
+                type="checkbox"                    
+                class="form-check-input style-alarma-switch"
+                id="status"
+                formControlName="status"
+                style="transform: scale(1.5);"
+            />
+        </div>
+      </div>
+
+      <div class="item-card-container p-2">  
+        <h5>
+            Corre Caminos
+            <em 
+                style="margin-left: 100px; color: brown; cursor: pointer"
+                class="bi bi-pencil">
+            </em>
+            <em 
+                style="margin-left: 10px; color: brown; cursor: pointer"
+                class="bi bi-trash3">
+            </em>
+            <em 
+                style="margin-left: 10px; color: brown; cursor: pointer"
+                class="bi bi-play-fill">
+            </em>
+        </h5>
+        <span>correcaminos_v1.mp3</span>
+        <div class="form-check form-switch">
+            <input
+                type="checkbox"                    
+                class="form-check-input style-alarma-switch"
+                id="status"
+                formControlName="status"
+                style="transform: scale(1.5);"
+            />
+        </div>
+      </div>
+
+      <div class="pagination-card-container"></div>
+
+    </form>
+  </div>
+  

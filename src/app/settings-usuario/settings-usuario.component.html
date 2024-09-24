@@ -1,0 +1,140 @@
+<div *ngIf="option === 'create'" class="settings-container">
+
+  <form
+    [formGroup]="createUsuarioForm"
+    (ngSubmit)="!createUsuarioForm.invalid && linkMenuTop('/settings/sesiones/create')"
+    class="alarma-settings-create-form main-shadow"
+  >
+    <div class="alarma-settings-header">
+      <h2 style="padding-bottom: 10px;">Registrar Usuario&nbsp;</h2>
+    </div>
+
+    <div class="inputs-container">
+
+      <div class="mb-3">
+        <label for="name" class="form-label style-alarma-label">Nombre Completo:</label>
+        <input
+          type="text"
+          class="form-control style-alarma-input"
+          id="name"
+          formControlName="name"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="
+            createUsuarioForm.get('name')?.invalid &&
+            (createUsuarioForm.get('name')?.dirty ||
+              createUsuarioForm.get('name')?.touched)
+          "
+        >
+          <div *ngIf="createUsuarioForm.get('name')?.errors?.required">
+            El nombre es requerido.
+          </div>
+          <div *ngIf="createUsuarioForm.get('name')?.errors?.minlength">
+            El nombre debe tener al menos 3 caracteres.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label style-alarma-label">Correo Electrónico:</label>
+        <input
+          type="text"
+          class="form-control style-alarma-input"
+          id="email"
+          formControlName="email"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="
+            createUsuarioForm.get('email')?.invalid &&
+            (createUsuarioForm.get('email')?.dirty ||
+              createUsuarioForm.get('email')?.touched)
+          "
+        >
+          <div *ngIf="createUsuarioForm.get('email')?.errors?.required">
+            El correo electrónico es requerido.
+          </div>
+          <div *ngIf="createUsuarioForm.get('email')?.errors?.minlength">
+            El correo electrónico debe tener al menos 3 caracteres.
+          </div>
+        </div>
+      </div>
+	  
+      <div class="mb-3">
+          <label for="user" class="form-label style-alarma-label">Usuario:</label>
+          <input
+            type="text"
+            class="form-control style-alarma-input"
+            id="user"
+            formControlName="user"
+            required
+          />
+          <div
+            class="alert alert-danger"
+            *ngIf="
+              createUsuarioForm.get('user')?.invalid &&
+              (createUsuarioForm.get('user')?.dirty ||
+                createUsuarioForm.get('user')?.touched)
+            "
+          >
+            <div *ngIf="createUsuarioForm.get('user')?.errors?.required">
+              El usuario es requerido.
+            </div>
+            <div *ngIf="createUsuarioForm.get('user')?.errors?.minlength">
+              El usuario debe tener al menos 3 caracteres.
+            </div>
+          </div>
+        </div>
+	  
+        <div class="mb-3">
+            <label for="contrasena" class="form-label style-alarma-label">Contraseña:</label>
+            <input
+              type="password"
+              class="form-control style-alarma-input"
+              id="contrasena"
+              formControlName="contrasena"
+              required
+            />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                createUsuarioForm.get('contrasena')?.invalid &&
+                (createUsuarioForm.get('contrasena')?.dirty ||
+                  createUsuarioForm.get('contrasena')?.touched)
+              "
+            >
+              <div *ngIf="createUsuarioForm.get('contrasena')?.errors?.required">
+                La contraseña es requerida.
+              </div>
+              <div *ngIf="createUsuarioForm.get('contrasena')?.errors?.minlength">
+                La contraseña debe tener al menos 3 caracteres.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="create-alarma-button-container">
+          <button
+            (click)="linkMenuTop('/settings/sesiones/create')"
+            class="btn create-alarma-button"
+          >
+            Cancelar
+            <em style="margin-left: 10px" class="bi bi-x-square"></em>
+          </button>
+          <button
+            [disabled]="!createUsuarioForm.valid"
+            style="margin-left: 20px"
+            class="btn create-alarma-button"
+            type="submit"
+          >
+            Guardar
+            <em style="margin-left: 10px" class="bi bi-floppy"></em>
+          </button>
+          &nbsp;&nbsp;&nbsp;
+        </div>
+  </form>
+</div>

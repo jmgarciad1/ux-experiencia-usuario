@@ -1,0 +1,104 @@
+/*Navbar*/
+.global-margin-top {
+  margin-top: var(--global-margin-top);
+}
+.global-margin-bottom {
+  margin-top: var(--global-margin-bottom);
+}
+.navbar-container {
+  padding: 20px;
+}
+.navbar-title-container {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-title-text {
+  margin: 0px;
+}
+.navbar-title-icon {
+  margin-right: 5px;
+  font-size: 2rem;
+}
+
+.remove-padding-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Side bar*/
+.sidebar-container {
+  background-color: var(--primary-purple);
+  color: white;
+  display: flex;
+  flex-flow: column;
+}
+.navbar-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-functions {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+.navbar-functions-items {
+  display: flex;
+  font-size: var(--primary-icon-size);
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.sidebar-nav ul li a {
+  font-size: var(--primary-icon-size);
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+  color: white;
+}
+.sidebar-icon {
+  margin-right: 10px;
+  transition: var(--primary-transition-time);
+}
+.sidebar-item {
+  width: 100% !important;
+  transition: var(--primary-transition-time);
+}
+.sidebar-nav .offcanvas {
+  width: 220px;
+  border: none;
+}
+.sidebar-nav .offcanvas ul li a span {
+  font-size: 18px;
+  position: relative;
+  top: -4px;
+  transition: var(--primary-transition-time);
+}
+.sidebar-item:hover {
+  background-color: var(--secondary-purple);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+.sidebar-nav .offcanvas.show ul li a:hover .sidebar-item {
+  text-align: center;
+  padding-left: 10px;
+}
+
+.footer-icon-container {
+  font-size: var(--primary-icon-size);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/*Bootstrap configuration*/
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}

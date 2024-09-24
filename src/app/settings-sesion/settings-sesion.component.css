@@ -1,0 +1,32 @@
+.style-alarma-label {
+  margin-left: 23px;
+  color: var(--font-color-label);
+}
+
+.style-alarma-label-contrasena {
+  margin-left: 23px;
+  color: var(--font-color-contrasena);
+}
+
+.style-alarma-input {
+  margin-left: 23px;
+  width: 258px;
+  border-color: var(--border-color-input);
+  color: var(--font-color-input);
+}
+
+.create-alarma-button {
+  border-radius: 20px;
+  background-color: var(--primary-purple);
+  color: var(--font-color-primary);
+}
+
+.create-alarma-button:hover {
+  background-color: var(--secondary-purple);
+}
+
+.image-cabecera-thumbnail {
+  width: 80px;
+  margin-left: 240px;
+  margin-top: -10px;
+}

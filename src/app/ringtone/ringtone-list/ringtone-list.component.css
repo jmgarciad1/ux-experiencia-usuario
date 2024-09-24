@@ -1,0 +1,14 @@
+.style-alarma-new {
+  transform: scale(1.8); 
+  text-align: right; 
+  margin-right: 180px; 
+  padding-bottom: 10px; 
+  cursor:pointer;
+}
+
+.style-alarma-switch {
+  margin-left: 240px;
+  margin-top: -20px;
+  background-color: var(--primary-purple);
+  border-color: var(--primary-purple);
+}

@@ -1,0 +1,102 @@
+<div *ngIf="option === 'create'" class="settings-container">
+
+  <form
+    [formGroup]="createSesionForm"
+    (ngSubmit)="!createSesionForm.invalid && linkMenuTop('/settings/usuarios/create')"
+    class="alarma-settings-create-form main-shadow"
+  >
+    <div class="alarma-settings-header">
+      <h2 style="padding-bottom: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;Alarmas</h2>
+    </div>
+
+    <img 
+      src="../../assets/reloj2.PNG" 
+      alt="Fondo" 
+      class="image-cabecera-thumbnail">
+
+    <div class="inputs-container">
+	  
+      <div class="mb-3">
+          <label for="user" class="form-label style-alarma-label">Usuario:</label>
+          <input
+            type="text"
+            class="form-control style-alarma-input"
+            id="user"
+            formControlName="user"
+            required
+          />
+          <div
+            class="alert alert-danger"
+            *ngIf="
+              createSesionForm.get('user')?.invalid &&
+              (createSesionForm.get('user')?.dirty ||
+                createSesionForm.get('user')?.touched)
+            "
+          >
+            <div *ngIf="createSesionForm.get('user')?.errors?.required">
+              El usuario es requerido.
+            </div>
+            <div *ngIf="createSesionForm.get('user')?.errors?.minlength">
+              El usuario debe tener al menos 3 caracteres.
+            </div>
+          </div>
+        </div>
+	  
+        <div class="mb-3">
+            <label for="contrasena" class="form-label style-alarma-label">Contraseña:</label>
+            <input
+              type="password"
+              class="form-control style-alarma-input"
+              id="contrasena"
+              formControlName="contrasena"
+              required
+            />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                createSesionForm.get('contrasena')?.invalid &&
+                (createSesionForm.get('contrasena')?.dirty ||
+                  createSesionForm.get('contrasena')?.touched)
+              "
+            >
+              <div *ngIf="createSesionForm.get('contrasena')?.errors?.required">
+                La contraseña es requerida.
+              </div>
+              <div *ngIf="createSesionForm.get('contrasena')?.errors?.minlength">
+                La contraseña debe tener al menos 3 caracteres.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-3 mb-2">
+          <label 
+            style="margin-left: 130px; width: 315px; cursor: pointer;"
+            class="form-label style-alarma-label-contrasena">
+            ¿Olvidó su contraseña?
+          </label>
+        </div>
+
+        <div class="create-alarma-button-container">
+          <button
+            style="margin-left: 50px"
+            (click)="linkMenuTop('/settings/autenticaciones/create')"
+            class="btn create-alarma-button"
+          >
+            Iniciar Sesión
+            <em style="margin-left: 10px" class="bi bi-x-square"></em>
+          </button>
+          <button
+            [disabled]="!createSesionForm.valid"
+            style="margin-left: 20px"
+            class="btn create-alarma-button"
+            type="submit"
+          >
+            Registrarse
+            <em style="margin-left: 10px" class="bi bi-floppy"></em>
+          </button>
+          &nbsp;&nbsp;&nbsp;
+        </div>
+  </form>
+</div>
