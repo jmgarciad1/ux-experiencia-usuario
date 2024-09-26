@@ -9,10 +9,10 @@ Pre-requisitos:
 Clonar repositorio:
 git clone https://github.com/jmgarciad1/ux-experiencia-usuario
 
-Cambiar rama: 
-web
+Cambiar a rama web: 
+git checkout web
 
-Copiar todos los archivos contenidos en la rama en el proyecto de Angular
+Copiar todos los archivos contenidos en la rama web
 
 Ejecura proyecto:
 ng serve -o
