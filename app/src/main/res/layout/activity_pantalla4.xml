@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/volver"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3C4450"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/textura1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.04"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/textura1"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/textura2"
+        android:layout_width="418dp"
+        android:layout_height="543dp"
+        android:layout_marginBottom="-200dp"
+        android:alpha="0.1"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/textura2"
+        tools:ignore="ContentDescription,VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/textura3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:alpha="0.01"
+        android:rotation="180"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:translationY="-520dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/textura3"
+        tools:ignore="ContentDescription,VisualLintBounds" />
+
+    <Button
+        android:id="@+id/volver4"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="#9965AC7E"
+        android:onClick="volverpantalla3"
+        android:text="Volver"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guardar4"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#A59B56"
+        android:onClick="irpantalla5"
+        android:text="@string/reproducir"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/volver4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stop" />
+
+    <Button
+        android:id="@+id/guardar4"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="#97F294"
+        android:text="Guardar"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/volver4"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:translationY="88dp"
+        app:layout_constraintBottom_toTopOf="@id/grabando"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textura1"
+        app:srcCompat="@drawable/titulo2"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <TextView
+        android:id="@+id/grabando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:text="@string/grabando_audio"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/mic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#00BD2323"
+        android:contentDescription="@string/microfono"
+        app:layout_constraintBottom_toTopOf="@id/stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grabando"
+        app:srcCompat="@drawable/mic"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/detener"
+        app:layout_constraintBottom_toTopOf="@id/play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mic"
+        app:srcCompat="@drawable/stop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

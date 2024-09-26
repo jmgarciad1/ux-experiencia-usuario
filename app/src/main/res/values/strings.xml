@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">AlarmaApp</string>
+    <string name="imagen1" tools:ignore="Typos">imagen1</string>
+    <string name="alarma_2">Alarma 2</string>
+    <string name="alarma_3">alarma 3</string>
+    <string name="anadir_nueva_alarma">Anadir nueva alarma</string>
+    <string name="btn_alarma">Alarma</string>
+    <string name="btn_reloj">Reloj</string>
+    <string name="opciones_alarma">opciones</string>
+    <string name="textura_principal">textura principal</string>
+    <string name="titulo_principal">Titulo principal</string>
+    <string name="constraint">Constraint layout</string>
+    <string name="textura_superior">textura superior</string>
+    <string name="textura_inferior">textura inferior</string>
+    <string name="nueva_alarma">nueva alarma</string>
+    <string name="alarma_nueva">alarma nueva</string>
+    <string name="fondo_principal">Fondo Principal</string>
+    <string name="hora_de_alarma">Hora de Alarma</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="str_alarma_nueva">str_alarma nueva</string>
+    <string name="hora_alarma">hora alarma</string>
+    <string name="fecha_alarma">fecha alarma</string>
+    <string name="anterior_2">Anterior</string>
+    <string name="vibrar">Vibrar:</string>
+    <string name="anterior">Anterior</string>
+    <string name="guardar_des">Guardar</string>
+    <string name="si">SI</string>
+    <string name="contacto_de_respaldo">Contacto de Respaldo:</string>
+    <string name="d_as_de_la_semana">Días de la semana</string>
+    <string name="fondo_de_alarma">Fondo de Alarma:</string>
+    <string name="grabaci_n_de_audio">Grabación de audio</string>
+    <string name="detener">Detener</string>
+    <string name="reproducir">Reproducir</string>
+    <string name="microfono">Microfono</string>
+    <string name="grabando_audio">Grabando Audio...</string>
+    <string name="tono_reproducido">Tono reproducido</string>
+    <string name="reproduciendo">Reproduciendo...</string>
+    <string name="barra_de_progreso_tonos">barra de progreso tonos</string>
+    <string name="grabaci_n_de_audio_realizada">Grabación de audio</string>
+    <string name="guardar_habilitado">Guardar</string>
+    <string name="persona_de_respaldo">Persona de Respaldo:</string>
+    <string name="mensaje_a_contacto">mensaje a contacto</string>
+    <string name="numero_contacto">numero_contacto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
