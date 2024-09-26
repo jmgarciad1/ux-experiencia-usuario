@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/volver"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3C4450"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/textura1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.04"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/textura1"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/textura2"
+        android:layout_width="418dp"
+        android:layout_height="543dp"
+        android:layout_marginBottom="-200dp"
+        android:alpha="0.1"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/textura2"
+        tools:ignore="ContentDescription,VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/textura3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:alpha="0.01"
+        android:rotation="180"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:translationY="-520dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/textura3"
+        tools:ignore="ContentDescription,VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationY="88dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/dias6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/titulo2"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toTopOf="@id/grabacionaudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dias6"
+        app:srcCompat="@drawable/dias"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/dias6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:text="Días de la semana"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/respaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacto de Respaldo:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grabacionaudio"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/fondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="Fondo de Alarma:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/si2"
+        app:layout_constraintStart_toStartOf="@+id/respaldo"
+        app:layout_constraintTop_toBottomOf="@id/si1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/grabacionaudio"
+        android:layout_width="207dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#73AB7A"
+        android:text="@string/grabaci_n_de_audio_realizada"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/respaldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView5" />
+
+    <Button
+        android:id="@+id/si1"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="9dp"
+        android:backgroundTint="#9C9EA2"
+        android:gravity="center"
+        android:onClick="irpantalla7"
+        android:text="SI"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/no1"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/respaldo"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText" />
+
+    <Button
+        android:id="@+id/si2"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="128dp"
+        android:backgroundTint="#9D9FA3"
+        android:gravity="center"
+        android:text="SI"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/anterior3"
+        app:layout_constraintStart_toStartOf="@+id/si1"
+        app:layout_constraintTop_toBottomOf="@+id/fondo"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/no1"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="104dp"
+        android:backgroundTint="#9D9FA3"
+        android:gravity="center"
+        android:text="NO"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/si1"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText" />
+
+    <Button
+        android:id="@+id/no2"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#9D9FA3"
+        android:gravity="center"
+        android:text="NO"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/no1"
+        app:layout_constraintTop_toTopOf="@+id/si2"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/anterior3"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="85dp"
+        android:backgroundTint="#65AC7E"
+        android:onClick="volverpantalla5"
+        android:text="Anterior"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guardar6"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/guardar6"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="85dp"
+        android:backgroundTint="#939393"
+        android:text="Guardar"
+        android:textColor="#66000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/anterior3"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
