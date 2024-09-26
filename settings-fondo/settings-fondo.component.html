@@ -1,0 +1,153 @@
+<div *ngIf="option === 'create'" class="settings-container">
+
+  <div class="main-header create-alarma-button-container">
+
+    <button
+      (click)="linkMenuTop('/ringtones')"
+      class="menu-alarma-button"
+    >
+      Ringtones
+      <em style="margin-left: 5px" class="bi bi-check"></em>
+    </button>
+
+    <button
+      (click)="linkMenuTop('/fondos')"
+      class="menu-alarma-button-active"
+    >
+      Fondos
+    </button>    
+
+    <button
+      class="menu-alarma-button"
+    >
+      Filtros
+    </button>
+
+    <button
+      class="menu-alarma-button"
+    >
+      Festivos
+    </button>
+
+    <button
+      class="menu-alarma-button"
+    >
+      Predeterminadas
+    </button>
+
+    <button
+      (click)="linkMenuTop('/settings/sesiones/create')"
+      class="menu-alarma-button"
+    >
+      Salir
+      <em style="margin-left: 5px; color: red;" class="bi bi-box-arrow-right"></em>
+    </button>
+    
+  </div>
+
+  <form
+    [formGroup]="createFondoForm"
+    (ngSubmit)="!createFondoForm.invalid && linkMenuTop('/fondos')"
+    class="alarma-settings-create-form main-shadow"
+  >
+    <div class="alarma-settings-header">
+      <h2 style="padding-bottom: 10px;">Registrar Fondo&nbsp;&nbsp;&nbsp;</h2>
+    </div>
+
+    <div class="inputs-container">
+
+      <div class="mb-3">
+        <label for="name" class="form-label style-alarma-label">Nombre:</label>
+        <input
+          type="text"
+          class="form-control style-alarma-input"
+          id="name"
+          formControlName="name"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="
+            createFondoForm.get('name')?.invalid &&
+            (createFondoForm.get('name')?.dirty ||
+              createFondoForm.get('name')?.touched)
+          "
+        >
+          <div *ngIf="createFondoForm.get('name')?.errors?.required">
+            El nombre es requerido.
+          </div>
+          <div *ngIf="createFondoForm.get('name')?.errors?.minlength">
+            El nombre debe tener al menos 3 caracteres.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label style-alarma-label">Descripción:</label>
+        <textarea
+          class="form-control style-alarma-input"
+          id="description"
+          formControlName="description">
+        </textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="filefondo" class="form-label style-alarma-label">Archivo (formato jpg):</label>
+        <input
+          type="file"
+          class="form-control style-alarma-input"
+          id="filefondo"
+          formControlName="filefondo"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="
+            createFondoForm.get('filefondo')?.invalid &&
+            (createFondoForm.get('filefondo')?.dirty ||
+              createFondoForm.get('filefondo')?.touched)
+          "
+        >
+          <div *ngIf="createFondoForm.get('filefondo')?.errors?.required">
+            El archivo del fondo en formato jpg es requerido.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="form-check form-switch">
+          <label for="status" class="form-check-label style-alarma-label-switch">Estado</label>    
+          <input
+            type="checkbox"
+            class="form-check-input style-alarma-switch"
+            id="status"
+            formControlName="status"
+            style="transform: scale(1.8);"
+            />
+          
+        </div>     
+      </div>
+
+    </div>
+
+    <div class="create-alarma-button-container">
+      <button
+        (click)="linkMenuTop('/fondos')"
+        class="btn create-alarma-button"
+      >
+        Cancelar
+        <em style="margin-left: 10px" class="bi bi-x-square"></em>
+      </button>
+      <button
+        [disabled]="!createFondoForm.valid"
+        style="margin-left: 20px"
+        class="btn create-alarma-button"
+        type="submit"
+      >
+        Guardar
+        <em style="margin-left: 10px" class="bi bi-floppy"></em>
+      </button>
+      &nbsp;&nbsp;&nbsp;
+    </div>
+  </form>
+</div>

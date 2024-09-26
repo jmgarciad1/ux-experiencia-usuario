@@ -1,0 +1,63 @@
+<div *ngIf="option === 'create'" class="settings-container">
+
+  <form
+    [formGroup]="createAutenticacionForm"
+    (ngSubmit)="!createAutenticacionForm.invalid && linkMenuTop('/ringtones')"
+    class="alarma-settings-create-form main-shadow"
+  >
+    <div class="alarma-settings-header">
+      <h3 style="padding-bottom: 10px;">Verificación Identidad</h3>
+    </div>
+
+    <div class="inputs-container">
+
+      <div class="mb-3">
+        <label for="code" class="form-label style-alarma-label">Ingrese el código de autenticación</label>
+        <input
+          type="text"
+          class="form-control style-alarma-input"
+          id="code"
+          formControlName="code"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="
+            createAutenticacionForm.get('code')?.invalid &&
+            (createAutenticacionForm.get('code')?.dirty ||
+              createAutenticacionForm.get('code')?.touched)
+          "
+        >
+          <div *ngIf="createAutenticacionForm.get('code')?.errors?.required">
+            El código de autenticación es requerido.
+          </div>
+          <div *ngIf="createAutenticacionForm.get('code')?.errors?.minlength">
+            El código de autenticación debe tener al menos 3 caracteres.
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+	<div class="create-alarma-button-container">
+	  <button
+      [disabled]="!createAutenticacionForm.valid"
+      style="margin-right: 130px"
+      class="btn create-alarma-button"
+      type="submit"
+	  >
+		Comprobar
+		<em style="margin-left: 10px" class="bi bi-shield-check"></em>
+	  </button>
+	</div>
+
+  <div class="mt-3">
+    <label 
+      style="margin-left: 130px; width: 315px;"
+      class="form-label style-alarma-label">
+      Señora ama de casa: Se ha generado un código de autenticación y se ha enviado al correo electrónico registrado.
+    </label>
+  </div>
+	
+  </form>
+</div>
