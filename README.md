@@ -6,19 +6,19 @@ Pre-requisitos:
 * Instalar npm
 * Instalar angular
 
-Clonar repositorio:
-git clone https://github.com/jmgarciad1/ux-experiencia-usuario
+- Clonar repositorio:
+	git clone https://github.com/jmgarciad1/ux-experiencia-usuario
 
-Cambiar a rama web: 
-git checkout web
+- Cambiar a rama web: 
+	git checkout web
 
-Copiar todos los archivos contenidos en la rama web
+- Copiar todos los archivos contenidos en la rama web
 
-Ejecura proyecto:
-ng serve -o
+- Ejecutar proyecto:
+	ng serve -o
 
-Ruta:
-http://localhost:4200/.
+- Ruta:
+	http://localhost:4200/
 
 Servicios:
 * settings/sesiones/create
